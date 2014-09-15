@@ -115,7 +115,7 @@ def home():
 
 
 print '<html><head><title>Violence and Gun Control</title></head>'
-print '<body><h1>Why?</h1>'
+print '<body><h1>Why?</h1>'+"Gun control is a pertinent issue, with major gun control reform having just been shot down of the floor of the Senate. Every year the Brady Campaign, a pro gun control organization releases a report providing each state with a score for the comprehensiveness of their gun control legislation. These reports are always met with scepticism and scorn from groups like the NRA. They claim that these rankings are irrelivent, and don't take into account or reflect issues like crime in the state, or number of deaths with a fire arm. So I decided to see if there was a cooralation between the rate of deaths with a fire arm in a state, and the score provided by the Brady foundation."
 print '<h1>The Data</h1>'
 print '<h4>Violent Crimes per 100,000 in 2007 (ordered)</h4>'
 print crimest
