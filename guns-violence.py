@@ -1,4 +1,5 @@
-#!/usr/bin/python
+import flask from Flask, render_template
+
 print "Content-type:text/html\n"
 
 #setting up RANKINGS
@@ -105,6 +106,14 @@ for x in crimesd:
 basicdata[['Gun Control Score',ra,d,d/.50],['Violent Crime Rate',ca,failp+1,failp+1/.5]]
 
 failp/=.5
+
+
+@app.route("/")
+@app.route("/home");
+def home():
+    return render_template("home.html");
+
+
 print '<html><head><title>Violence and Gun Control</title></head>'
 print '<body><h1>Why?</h1>'
 print '<h1>The Data</h1>'
