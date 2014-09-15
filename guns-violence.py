@@ -1,7 +1,8 @@
 #!/usr/bin/python
-print 'Content-type:text/html\n'
+from flask import Flask, render_template
+app = Flask(__name__)
 
-
+    
 #setting up RANKINGS
 c=open("scores.txt")
 ranks=c.read()
@@ -109,8 +110,25 @@ btable+='</table>'
 
 f=open("html.txt")
 html=f.readlines()
+"""
 for x in html[:48]:
     print x
+   """
+@app.route("/")
+@app.route("/home")
+def home():
+        return render_template("home.html")
+
+@app.route("/why")
+def why():
+    return render_template("why.html")
+
+@app.route("/data")
+def data():
+    return render_template("data.html",ranksd=ranksd,ra=ra,btable=btable)
+
+
+'''
 print table
 print'</center>'
 for x in html[48:53]:
@@ -123,3 +141,10 @@ print btable
 for x in html[55:]:
     print x
 print'</body></html>'
+'''
+
+
+if __name__=="__main__":
+    app.debug=True
+    app.run(host="0.0.0.0",port=1209)
+    app.run()
