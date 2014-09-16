@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body{
-background-color:black;
-background-image:url(http://1-background.com/images/meteorites/moon-rock-bw-seamless-background-texture.jpg)
-}
-h1{
-background-color:gray;
-}
-h2{
-background-color:lightgray;
-}
-h4{
-background-color:white;
-}
-p{
-background-color:white;
-}
-ul{
-background-color:white;
-}
-table{
-background-color:white;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="{{ url_for( 'static',filename='css/theme.css') }}">
 </head>
-<body>
+<body id="main_page">
+<div >
 <center>
 <font color= "darkred" face= "copperplatelight"background-color=
-"lightgray"><h1> Effects of Gun Control on Deathswith Fire Arms
+"lightgray"><h1> Effects of Gun Control on Deaths with Fire Arms
 </h1>
 </font>
 <form action="/why">
@@ -38,7 +16,8 @@ background-color:white;
 <form action="/data">
 <button type="submit" value="data">The Data</button>
 </form>
-</center> </body>
+</center>
+</div> </body>
 
 
 </html>

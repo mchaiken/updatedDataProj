@@ -1,0 +1,40 @@
+body{
+background-color:black;
+background-image:url("http://www.designbolts.com/wp-content/uploads/2012/12/Grey-Jean-White-Seamless-Patterns-For-Website-Backgrounds.jpg");
+padding:30px 100px;
+}
+h1{
+	text-align: center;
+	font-size: 400%;
+}
+h2{
+background-color:lightgray;
+}
+h4{
+background-color:white;
+}
+p{
+background-color:white;
+}
+ul{
+background-color:white;
+}
+table{
+background-color:white;
+}
+button{
+	background-color:darkred;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	color:white;
+	font-family:arial;
+	font-size:17px;
+	padding:16px 31px;
+}
+button:hover {
+	background-color:black;
+}
+.main_page {
+	backgroun-color: pink;
+}

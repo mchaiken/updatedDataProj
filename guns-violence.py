@@ -73,6 +73,8 @@ for x in ranks[1:]:
 ranksd['RHODE ISLAND ']=ranksd['\xc2\xa0RHODE ISLAND ']
 ranksd.pop('\xc2\xa0RHODE ISLAND ')
 
+
+sortedranksd= sorted(ranksd)
 #MAKING BIG TABLE:
 
 table='<table border="1"><tr><th>State</th><th>Score for Gun Control*</th><th>Gun Deaths per 100,000</th></tr>'
@@ -81,7 +83,11 @@ for x in sorted(ranksd):
     table+='<tr><td>'+x+'</td><td>'+ranksd[x]+'</td><td>'+crimesd[x[:len(x)-1]]+"</td></tr>\n"
 
 table+='</table>'
-
+crimesdVals={}
+i=0
+for x in sorted(ranksd):
+    crimesdVals[x]=crimesd[x[:len(x)-1]]
+                           
                                                                  
 
 #FINDING % OF STATES W/ RANKS BELOW AVERAGE
@@ -125,12 +131,16 @@ def why():
 
 @app.route("/data")
 def data():
-    return render_template("data.html",ranksd=ranksd,ra=ra,btable=btable)
+    return render_template("data.html",ranksd=ranksd,sortedranksd=sortedranksd,crimesdVals=crimesdVals)
 
 
 '''
 print table
-print'</center>'
+print'</c
+
+
+
+enter>'
 for x in html[48:53]:
     print x
 print ca

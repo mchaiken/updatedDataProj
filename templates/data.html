@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html> <head>
+<html>
+   <head>
+	   <link rel="stylesheet" type="text/css" href="{{ url_for( 'static',filename='css/theme.css') }}">
 <title></title>
 </head>
 
@@ -9,8 +11,11 @@
 	<h4> Scores for Comprehensivness of Gun Control and Number of Death's by Fire Arm</h4>
 
 <table border="1"><tr><th>State</th><th>Score for Gun Control*</th><th>Gun Deaths per 100,000</th></tr>
-{%for x in {{ranksd}}
- 
+{% for x in sortedranksd%}
+	<tr><td> {{x}} </td><td> {{ranksd[x]}} </td><td>{{crimesdVals[x]}}</td</tr>
+	
+ {% endfor %}
+</table>
 
 <p>*All scores out of 100. Score from 2007 brady campaign score card for more info <a href="http://www.bradycampaign.org/stategunlaws/scorecard-descriptions?s=1">Click Here</a></p>
 <center>
