@@ -1,27 +1,26 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="{{ url_for( 'static',filename='css/theme.css') }}">
-</head>
-<body id="main_page">
-<div >
-<center>
-<font color= "darkred" face= "copperplatelight"background-color=
-"lightgray"><h1> Effects of Gun Control on Deaths with Fire Arms
-</h1>
-</font>
-<form action="/why">
-<button type="submit" value="why">Why Do This?</button>
-</form>
-<form action="/data">
-<button type="submit" value="data">The Data</button>
-</form>
-<form action="/analysis">
-<button type="submit" value="analysis">The Analysis</button>
-</form>
-</center>
-</div> </body>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for( 'static',filename='css/theme.css') }}">
+    </head>
 
+    <body id="main_page">
+        <center>
+            <font color= "darkred" face= "copperplatelight"background-color=
+"lightgray"><h1> Effects of Gun Control on Deaths with Firearms</h1></font>
 
+            <form action="/why">
+                <button type="submit" value="why">Why Do This?</button>
+            </form>
+            <form action="/data">
+                <button type="submit" value="data">The Data</button>
+            </form>
+            <form action="/analysis">
+                <button type="submit" value="analysis">The Analysis</button>
+            </form>
+        </center>
+    </body>
 </html>
 
