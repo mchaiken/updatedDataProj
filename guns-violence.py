@@ -75,6 +75,7 @@ ranksd.pop('\xc2\xa0RHODE ISLAND ')
 
 
 sortedranksd= sorted(ranksd)
+
 #MAKING BIG TABLE:
 
 table='<table border="1"><tr><th>State</th><th>Score for Gun Control*</th><th>Gun Deaths per 100,000</th></tr>'
@@ -116,10 +117,8 @@ btable+='</table>'
 
 f=open("html.txt")
 html=f.readlines()
-"""
-for x in html[:48]:
-    print x
-   """
+
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -131,8 +130,12 @@ def why():
 
 @app.route("/data")
 def data():
-    return render_template("data.html",ranksd=ranksd,sortedranksd=sortedranksd,crimesdVals=crimesdVals)
+    return render_template("data.html",ranksd=ranksd, sortedranksd=sortedranksd, crimesdVals=crimesdVals)
 
+
+@app.route("/analysis")
+def analysis():
+    return render_template("analysis.html", numDeathsGun=ca, averageScore=ra,basicdataResults=basicdata,);
 
 '''
 print table
