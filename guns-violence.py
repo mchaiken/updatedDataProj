@@ -156,6 +156,10 @@ for x in html[55:]:
 print'</body></html>'
 '''
 
+@app.route("/sources")
+def sources():
+    render_template("sources.html");
+
 
 if __name__=="__main__":
     app.debug=True
