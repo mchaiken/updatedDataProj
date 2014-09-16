@@ -158,7 +158,7 @@ print'</body></html>'
 
 @app.route("/sources")
 def sources():
-    render_template("sources.html");
+    return render_template("sources.html");
 
 
 if __name__=="__main__":
