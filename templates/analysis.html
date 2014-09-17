@@ -11,12 +11,12 @@
             <h1>Analysis</h1>
 
         </center>
-
+<div class= "text_body">
         <p><b>Average Number of Deaths with a Firearm:</b> {{numDeathsGun}}
         <br><b>Average Score for Gun Control:</b> {{averageScore}}
         <br><b>Statistics:</b> From this data I decided to find the number of states with below average scores for gun control, the number with above average rates of death by firearm, and the number of states with both.<br></p>
 
-        <table border=1><tr><th>Statistic</th><th>Number of States</th><th>Percent of States</th></tr>
+        <table border=1 class= "white-table"><tr><th>Statistic</th><th>Number of States</th><th>Percent of States</th></tr>
             {% for x in basicdataResults %}
             <tr>
                 {%for y in x%}
@@ -33,5 +33,8 @@
         </center>
 
         <p>From this data we can see that about half of the states with below average scores from the Brady Campaign also have above average rates of murder with a firearm. This isn't huge, but does suggest that there is at least some sort of correlation between strength of gun control and muder rate with a firearm. It should also be taken into account that in many places with stronger gun control, weapons are brought in from out of state illegally, and the death by firearm rate in the US is over 40 times that of the UK. Either way, to suggest that these numbers should be dismissed or that there is no relation to the number of people who are killed by guns is untrue. </p>
+	<form action="/home">
+	<button value="Home"name="back">Go Back</button>
+	</form>
     </body>
 </html>
