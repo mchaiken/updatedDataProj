@@ -1,5 +1,9 @@
 #!/usr/bin/python
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+#import utils
+
+
+
 app = Flask(__name__)
 
     
@@ -119,7 +123,18 @@ btable+='</table>'
 @app.route("/")
 @app.route("/home")
 def home():
+    buttonVal=request.args.get("button","")
+    if buttonVal == "":
         return render_template("home.html")
+    elif buttonVal == "why":
+        return render_template("why.html")
+    elif buttonVal == "data":
+        return render_template("data.html",ranksd=ranksd, sortedranksd=sortedranksd, crimesdVals=crimesdVals)
+    elif buttonVal == "analysis":
+        return render_template("data.html",ranksd=ranksd, sortedranksd=sortedranksd, crimesdVals=crimesdVals)
+    elif buttonVal == "sources":
+        return render_template("sources.html");
+        
 
 @app.route("/why")
 def why():
