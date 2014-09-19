@@ -131,7 +131,7 @@ def home():
     elif buttonVal == "data":
         return render_template("data.html",ranksd=ranksd, sortedranksd=sortedranksd, crimesdVals=crimesdVals)
     elif buttonVal == "analysis":
-        return render_template("analysis.html",ranksd=ranksd, sortedranksd=sortedranksd, crimesdVals=crimesdVals)
+        return render_template("analysis.html", numDeathsGun=ca, averageScore=ra,basicdataResults=basicdata,)
     elif buttonVal == "sources":
         return render_template("sources.html");
         
