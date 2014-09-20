@@ -13,7 +13,7 @@
                     <h4> Scores for Comprehensivness of Gun Control and Number of Deaths by Firearm</h4>
                 </div>
                 <div class="container">
-                <table border="1" class="table"><tr><th>State</th><th>Score for Gun Control*</th><th>Gun Deaths per 100,000</th></tr>
+                <table border="1" class="table table-striped table-bordered"><tr><th>State</th><th>Score for Gun Control*</th><th>Gun Deaths per 100,000</th></tr>
                     {% for x in sortedranksd%}
                     <tr><td> {{x}} </td><td> {{ranksd[x]}} </td><td>{{crimesdVals[x]}}</td</tr>
 	
